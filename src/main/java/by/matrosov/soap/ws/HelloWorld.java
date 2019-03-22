@@ -1,6 +1,7 @@
 package by.matrosov.soap.ws;
 
 import by.matrosov.soap.model.Something;
+import by.matrosov.soap.ws.jaxws.GetSomethingAsMapResponse;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -15,4 +16,7 @@ public interface HelloWorld {
 
     @WebMethod
     Something getSomething();
+
+    @WebMethod
+    GetSomethingAsMapResponse getMap();
 }

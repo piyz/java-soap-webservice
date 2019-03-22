@@ -2,6 +2,7 @@ package by.matrosov.soap.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.Objects;
 
 @XmlType(propOrder = { "someString", "someInt", "someBoolean" }, name = "Something")
 @XmlRootElement
@@ -42,6 +43,21 @@ public class Something {
 
     public void setSomeBoolean(boolean someBoolean) {
         this.someBoolean = someBoolean;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Something something = (Something) o;
+        return someInt == something.someInt &&
+                someBoolean == something.someBoolean &&
+                someString.equals(something.someString);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(someString, someInt, someBoolean);
     }
 
     @Override

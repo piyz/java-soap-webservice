@@ -20,5 +20,6 @@ public class HelloWorldClient {
 
         System.out.println(hello.getHelloWorldAsString("WOWOWOWWOWOW"));
         System.out.println(hello.getSomething());
+        System.out.println(hello.getMap());
     }
 }
