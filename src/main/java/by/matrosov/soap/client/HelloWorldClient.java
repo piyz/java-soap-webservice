@@ -19,5 +19,6 @@ public class HelloWorldClient {
         HelloWorld hello = service.getPort(HelloWorld.class);
 
         System.out.println(hello.getHelloWorldAsString("WOWOWOWWOWOW"));
+        System.out.println(hello.getSomething());
     }
 }
